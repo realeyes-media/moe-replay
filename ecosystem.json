@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "relm",
+      "script": "./dist/bin/www.js",
+      "cwd": "/usr/src/app",
+      "watch": false
+    }
+  ]
+}

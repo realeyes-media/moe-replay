@@ -1,0 +1,24 @@
+version: "2"
+
+services:
+  # relm-manager:
+  #   image: relm-manager:latest
+  #   ports:
+  #     - 49165:4400
+
+  relm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      LOCAL_URL: "http://localhost:49160/"
+      LOCAL_PATH: "/usr/src/app/temp"
+      ADAPTOR_PATH: "../adaptors/"
+      MANIFEST_URL: "http://localhost:49160"
+      NODE_ENV: "production"
+      PORT: 3300
+    # volumes:
+    #   - ./dist:/usr/src/dist
+    #   - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 49160:3300
