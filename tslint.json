@@ -1,0 +1,39 @@
+{
+  "rules": {
+    "class-name": true,
+    "label-position": true,
+    "member-access": true,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-field",
+          "instance-field",
+          "constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ],
+    "no-angle-bracket-type-assertion": true,
+    "no-arg": true,
+    "no-bitwise": false,
+    "no-console": [true, "log", "debug", "info", "time", "timeEnd", "trace"],
+    "no-construct": true,
+    "no-debugger": false,
+    "no-duplicate-variable": true,
+    "no-empty": false,
+    "no-empty-interface": true,
+    "no-eval": true,
+    "no-inferrable-types": [true],
+    "no-shadowed-variable": false,
+    "no-string-literal": false,
+    "no-switch-case-fall-through": true,
+    "no-unused-expression": false,
+    "no-unused-variable": false,
+    "prefer-const": true,
+    "radix": true,
+    "triple-equals": [true, "allow-null-check"]
+  }
+}

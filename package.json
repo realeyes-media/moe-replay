@@ -1,0 +1,62 @@
+{
+  "name": "moe-replay",
+  "version": "1.0.0",
+  "private": false,
+  "repository": {
+    "url": "https://github.com/realeyes-media/moe-replay"
+  },
+  "homepage": "https://github.com/realeyes-media/moe-replay",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile": "npm run clean && tsc -p src/tsconfig.app.json",
+    "build-docker": "tsc -p src/tsconfig.app.json",
+    "start-docker": "pm2-runtime ecosystem.json",
+    "watch": "npm run clean && tsc -w -p src/tsconfig.app.json",
+    "lint": "tslint -c ./tslint.json 'src/**/*.ts' --exclude 'src/**/*.d.ts'",
+    "start": "pm2-docker ecosystem.json --only relm",
+    "dev": "node dist/bin/www.js",
+    "nodemon": "nodemon --watch ./dist dist/bin/www.js"
+  },
+  "keywords": [
+    "relm",
+    "live-manifest"
+  ],
+  "author": "Phil Moss <phil@realeyes.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/debug": "^0.0.29",
+    "@types/express": "^4.16.0",
+    "@types/node": "^7.10.0",
+    "@types/pino": "^3.0.1",
+    "@types/promisify-node": "^0.4.0",
+    "@types/request-promise-native": "^1.0.15",
+    "@types/tough-cookie": "^2.3.3",
+    "nodemon": "^1.18.7",
+    "prettier": "^1.14.3",
+    "ts-node": "^3.0.2",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "chokidar": "^2.0.4",
+    "cookie-parser": "^1.4.0",
+    "cors": "^2.8.4",
+    "debug": "^2.2.0",
+    "express": "^4.16.4",
+    "express-pino-logger": "^2.0.0",
+    "lodash": "^4.17.11",
+    "mime": "^2.0.3",
+    "mkdirp-promise": "^5.0.1",
+    "morgan": "^1.9.1",
+    "pino": "^4.5.2",
+    "promisify-node": "^0.5.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.1.1",
+    "request-promise-native": "^1.0.5",
+    "tough-cookie": "^2.4.3"
+  }
+}
